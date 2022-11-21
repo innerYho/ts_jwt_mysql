@@ -42,3 +42,9 @@ npm i --save-dev @types/jsonwebtoken
     #Generate a Strong Password!
 
 https://delinea.com/resources/password-generator-it-tool
+
+    # Postman with Token
+
+GET http://localhost:3001/api/productos
+Authorization => Bearer Token => give the token from
+GET http://localhost:3001/api/usuarios/login

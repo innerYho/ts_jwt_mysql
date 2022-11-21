@@ -1,8 +1,9 @@
 import { Router } from 'express';
-import { getPro } from '../controllers/pro.controller';
+import { getProductos } from '../controllers/producto.controller';
+import validateToken from './validate-token';
 
 const router = Router();
 
-router.get('/', getPro);
+router.get('/', validateToken, getProductos);
 
 export default router;

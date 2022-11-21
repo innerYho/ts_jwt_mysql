@@ -61,7 +61,8 @@ export const loginUser = (req: Request, res: Response) => {
               //okLogin create token
               const token = jwt.sign(
                 { nombre: nombre },
-                process.env.SECRET_KEY || 'claveGenerica'
+                process.env.SECRET_KEY || 'claveGenerica',
+                { expiresIn: '10000' }
               );
               // process.env.SECRET_KEY!) // ts esto no va a ser null
 
